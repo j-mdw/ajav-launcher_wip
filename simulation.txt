@@ -1,0 +1,7 @@
+Tower says: Helicopter#h1(0) registered to weather tower.
+Helicopter#h1(0): Oh no, it's raining again.
+Helicopter#h1(0): Fog? You gotta be kidding..
+Helicopter#h1(0): Let the sun shine!
+Helicopter#h1(0): Fog? You gotta be kidding..
+Helicopter#h1(0) landed.
+Tower says: Helicopter#h1(0) unregistered to weather tower.
