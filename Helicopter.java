@@ -1,5 +1,6 @@
 public class Helicopter extends Aircraft implements Flyable {
 
+	private boolean landed = false;
 	private WeatherTower weatherTower = null;
 	private static String[] weatherSentence = {
 		"Oh no, it's raining again.",
@@ -39,12 +40,16 @@ public class Helicopter extends Aircraft implements Flyable {
 		if (coordinates.getHeight() <= 0) {
 			msg += " landed.";
 			Printer.getInstance().write(msg);
-			weatherTower.unregister(this);
-			Printer.getInstance().write("Tower says: Helicopter#" + name + '(' + id + ") unregistered to weather tower.");
+			this.landed = true;
+			unregister();
 		} else {
 			msg += ": " + weatherSentence[currentWeather.ordinal()];
 			Printer.getInstance().write(msg);
 		}
+	};
+
+	public boolean hasLanded() {
+		return this.landed;
 	};
 
 	public void registerTower(WeatherTower weatherTower) {
@@ -52,4 +57,9 @@ public class Helicopter extends Aircraft implements Flyable {
 		weatherTower.register(this);
 		Printer.getInstance().write("Tower says: Helicopter#" + name + '(' + id + ") registered to weather tower.");
 	};
+
+	private void unregister() {
+		// weatherTower.unregister(this);
+		Printer.getInstance().write("Tower says: Helicopter#" + name + '(' + id + ") unregistered from weather tower.");	
+	}
 }

@@ -2,6 +2,7 @@
 
 // import _42.ajav_launcher.*;
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.LinkedList;
 
 public class Tower {
@@ -16,21 +17,18 @@ public class Tower {
 	}
 
 	protected void conditionsChanged() {
-		observers.forEach((observer) -> {
+		Iterator<Flyable> itr = observers.iterator();
+		while (itr.hasNext()) {
+			Flyable next = itr.next();
 			try {
-				observer.updateConditions();
+				next.updateConditions();
+				if (next.hasLanded()) {
+					itr.remove();
+				}
 			} catch (Exception err) {
 				System.out.println(err);
 				System.out.println("Failed to update conditions " + err.getMessage());
 			}
-		});
+		}
 	}
-
-	// private void printEvent(Flyable obj, boolean register) { //How to do this in a more clean fashion to handle both register and unregister?
-	// 	String msg = "Tower says: ";
-	// 	if (obj instanceof Helicopter) {
-	// 		msg += "Helicopter";
-	// 	}
-	// 	msg += "#" + obj.id
-	// }
 }
