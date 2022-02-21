@@ -1,0 +1,3 @@
+5
+helicopterr  hh1    10  20 	30
+        
