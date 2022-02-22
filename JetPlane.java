@@ -1,14 +1,14 @@
-public class Helicopter extends Aircraft implements Flyable {
+public class JetPlane extends Aircraft implements Flyable {
 
 	private boolean landed = false;
 	private WeatherTower weatherTower = null;
 	private static String[] weatherSentence = {
-		"Oh no, it's raining again.",
-		"Fog? You gotta be kidding..",
-		"Let the sun shine!",
-		"I love snow."
+		"It's raining, and I have a Jet!.",
+		"Fog? No problem, cos I gotta a Jet!",
+		"Life is perfect",
+		"Snow? Not a problem if you got a JET"
 	};
-	public Helicopter(String name, Coordinates coordinates) {
+	public JetPlane(String name, Coordinates coordinates) {
 		super(name, coordinates);
 	}
 
@@ -22,21 +22,21 @@ public class Helicopter extends Aircraft implements Flyable {
 		WeatherType currentWeather = WeatherProvider.getProvider().toEnum(currentWeatherName);
 		switch (currentWeather) {
 			case RAIN:
-				coordinates.move(5, 0, 0);
+				coordinates.move(0, 5, 0);
 				break;
 			case FOG:
-				coordinates.move(1, 0, 0);
+				coordinates.move(0, 1, 0);
 				break;
 			case SUN:
-				coordinates.move(10, 0, 2);
+				coordinates.move(0, 10, 2);
 				break;
 			case SNOW:
-				coordinates.move(0, 0, -12);
+				coordinates.move(0, 0, -7);
 				break;
 			default:
 				throw new UnknownWeatherException(currentWeatherName); 
 		}
-		String msg = "Helicopter#" + name + "(" + id + ")";
+		String msg = "JetPlane#" + name + "(" + id + ")";
 		if (coordinates.getHeight() <= 0) {
 			msg += " landed: longitude " + coordinates.getLongitude() + "; latitude " + coordinates.getLatitude();
 			Printer.getInstance().write(msg);
@@ -55,11 +55,11 @@ public class Helicopter extends Aircraft implements Flyable {
 	public void registerTower(WeatherTower weatherTower) {
 		this.weatherTower = weatherTower;
 		weatherTower.register(this);
-		Printer.getInstance().write("Tower says: Helicopter#" + name + '(' + id + ") registered to weather tower.");
+		Printer.getInstance().write("Tower says: JetPlane#" + name + '(' + id + ") registered to weather tower.");
 	};
 
 	private void unregister() {
 		// weatherTower.unregister(this);
-		Printer.getInstance().write("Tower says: Helicopter#" + name + '(' + id + ") unregistered from weather tower.");	
+		Printer.getInstance().write("Tower says: JetPlane#" + name + '(' + id + ") unregistered from weather tower.");	
 	}
 }

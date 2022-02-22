@@ -2,7 +2,7 @@ public class AircraftTypes {
   
   private static String[] types = {
     "Helicopter",
-    "Jet"
+    "JetPlane"
   };
 
   public static boolean isKnown(String type) {

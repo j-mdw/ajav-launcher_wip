@@ -15,6 +15,9 @@ public class Coordinates {
 		longitude += longitudeChange;
 		latitude += latitudeChange;
 		height += heightChange;
+		if (height > 100) {
+			height = 100;
+		}
 	}
 
 	public int getLongitude() { return longitude; }

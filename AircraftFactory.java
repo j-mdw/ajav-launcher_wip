@@ -5,7 +5,8 @@ public class AircraftFactory {
   }
 
   private FlyableCreator[] flyableCreators = new FlyableCreator[] {
-    new FlyableCreator() { public Flyable create(String name, Coordinates coordinates) { return new Helicopter(name, coordinates); } }
+    new FlyableCreator() { public Flyable create(String name, Coordinates coordinates) { return new Helicopter(name, coordinates); } },
+    new FlyableCreator() { public Flyable create(String name, Coordinates coordinates) { return new JetPlane(name, coordinates); } },
   };
 
   public Flyable newAircraft(String type, String name, int longitude, int latitude, int height) {

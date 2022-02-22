@@ -1,3 +1,5 @@
-5
-helicopterr  hh1    10  20 	30
-        
+20
+helicopter  hh1    10  20 	30
+helicopter  hh2    10  20 	30
+jetplane  jp1    11  22 	15
+JetPlane  jp2    10  30 	20

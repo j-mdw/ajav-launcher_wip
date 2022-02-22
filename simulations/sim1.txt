@@ -1,3 +1,5 @@
-5
-  helicopter  hh1    10  20 	30
-        
+20
+helicopter  hh1    10  20 	30
+helicopter  hh2    10  20 	30
+helicopter  hh3    10  20 	30
+helicopter  hh4    10  20 	30
