@@ -1,0 +1,4 @@
+20
+helicopter  hh1    10  20 	30
+baloon  b1    10  20 	30
+jetplane  jp1    10  20 	30
