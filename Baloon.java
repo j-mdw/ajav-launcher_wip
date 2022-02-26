@@ -1,3 +1,5 @@
+// package ajav_launcher;
+
 public class Baloon extends Aircraft implements Flyable {
 
 	private boolean landed = false;
@@ -13,12 +15,10 @@ public class Baloon extends Aircraft implements Flyable {
 	}
 
 	public void updateConditions() throws UnknownWeatherException, NoWeatherTower {
-		// System.out.println("Coordinates: " + coordinates.getLongitude() + " ; " + coordinates.getLatitude() + " ; " + coordinates.getHeight());
 		if (weatherTower == null)
 			throw new NoWeatherTower();
 		
 		String currentWeatherName = weatherTower.getWeather(coordinates);
-		// System.out.println("Weather: " + currentWeatherName);
 		WeatherType currentWeather = WeatherProvider.getProvider().toEnum(currentWeatherName);
 		switch (currentWeather) {
 			case RAIN:
@@ -59,7 +59,6 @@ public class Baloon extends Aircraft implements Flyable {
 	};
 
 	private void unregister() {
-		// weatherTower.unregister(this);
 		Printer.getInstance().write("Tower says: Baloon#" + name + '(' + id + ") unregistered from weather tower.");	
 	}
 }

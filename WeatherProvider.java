@@ -1,6 +1,5 @@
-// package _42.ajav_launcher.WeatherProvider;
+// package ajav_launcher;
 
-// import _42.ajav_launcher.*;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class WeatherProvider {

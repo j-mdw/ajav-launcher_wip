@@ -1,3 +1,5 @@
+// package ajav_launcher;
+
 import java.lang.Exception;
 
 public class UnexpectedTokenException extends Exception {

@@ -1,4 +1,4 @@
-// package _42.ajav_launcher.Coordinates;
+// package ajav_launcher;
 
 public class Coordinates {
 	private int longitude;

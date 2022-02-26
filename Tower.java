@@ -1,6 +1,5 @@
-// package _42.ajav_launcher.Tower;
+// package ajav_launcher;
 
-// import _42.ajav_launcher.*;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.LinkedList;

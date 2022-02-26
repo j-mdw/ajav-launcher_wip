@@ -1,3 +1,5 @@
+// package ajav_launcher;
+
 public class AircraftTypes {
   
   private static String[] types = {

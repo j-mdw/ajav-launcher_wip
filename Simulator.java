@@ -1,7 +1,6 @@
-import java.io.FileNotFoundException;
+// package ajav_launcher;
 
-// package _42.ajav_launcher.Simulator;
-// import _42.ajav_launcher.*;
+import java.io.FileNotFoundException;
 
 public class Simulator {
 	public static void main(String[] args) {
@@ -18,7 +17,6 @@ public class Simulator {
 			System.out.println("Could not find input file: " + args[0]);
 			return ;
 		} catch (Exception err) {
-			// System.out.println(err);
 			System.out.println(err.getMessage());
 			return ;
 		}

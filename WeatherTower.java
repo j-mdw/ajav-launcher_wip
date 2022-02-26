@@ -1,6 +1,4 @@
-// package _42.ajav_launcher.WeatherTower;
-
-// import _42.ajav_launcher.*;
+// package ajav_launcher;
 
 public class WeatherTower extends Tower {
 	public String getWeather(Coordinates coordinates) { 

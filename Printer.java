@@ -1,4 +1,4 @@
-// package _42.ajav_launcher.Printer;
+// package ajav_launcher;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -26,7 +26,6 @@ public class Printer {
 		try {
 			fileWriter.write(msg + '\n');
 			fileWriter.flush();
-			// System.out.println(msg + " <-- wrote to file");
 		} catch (IOException err) {
 			System.out.println("Failed to write to file");
 		}

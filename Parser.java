@@ -1,3 +1,5 @@
+// package ajav_launcher;
+
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -12,7 +14,6 @@ public class Parser {
   }
 
   public SimulationInputs parseSimulation(String filename) throws FileNotFoundException, IOException, UnexpectedTokenException, NumberFormatException {
-    // TYPE NAME LONGITUDE LATITUDE HEIGHT
     SimulationInputs simulationInputs = new SimulationInputs();
     FileReader file = new FileReader(filename);
     BufferedReader reader = new BufferedReader(file);

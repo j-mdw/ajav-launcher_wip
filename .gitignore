@@ -24,3 +24,6 @@ hs_err_pid*
 
 # simulation file
 simulation.txt
+
+# compilation file
+sources.txt

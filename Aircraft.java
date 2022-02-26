@@ -1,6 +1,4 @@
-// package _42.ajav_launcher.Aircraft;
-
-// import _42.ajav_launcher.*;
+// package ajav_launcher;
 
 public class Aircraft {
 	protected long id;

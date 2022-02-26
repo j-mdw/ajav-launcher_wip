@@ -1,4 +1,4 @@
-// package _42.ajav_launcher.UnknownWeatherException;
+// package ajav_launcher;
 
 import java.lang.Exception;
 
